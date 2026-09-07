@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+
+         /*
+            Tipos De format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype (Aple Advanced)
+            -svg
+            */
+        @font-face {
+            font-family: 'love' ;
+            src: url(fontes/love AlteHaasGroteskBold.ttf) format('opentype') url(fontes/love AlteHaasGroteskRegular.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+    
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-family: 'fontes/love', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officia, doloribus similique sit dolorum architecto accusantium odio eos aliquam doloremque ipsam animi labore mollitia est ipsa magnam inventore cum distinctio.</p>
+</body>
+</html>
