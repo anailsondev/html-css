@@ -12,11 +12,27 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
         }
 
         thead {
@@ -28,8 +44,36 @@
             color: white;
         }
 
+        thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd) { /*2n-1*/
+            background-color:ghostwhite;
+        }
+
+         tbody > tr:nth-child(even) { /*2n*/
+            background-color: lightgray;
+        }
+
         td.num {
             text-align: right;
+        }
+
+        p {
+            width: 500px;
+            height: 200px;
+            background-color: aquamarine;
+            padding: 10px;
+            border: 1px solid blue;
+            border-radius: 10px;
+            text-align: justify;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-indent: 30px;
         }
     </style>
 </head>
@@ -38,6 +82,7 @@
     <!--
     ANATOMIA PARA TABELAS GRANDES
     TABLE 
+        CAPTION
         THEAD
             TR, TD, TH
     TBODY
@@ -47,10 +92,11 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativa</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
 
         </thead>
@@ -168,10 +214,16 @@
 
         </tbody>
         <tfoot>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>210 147 125</strong></td>
 
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus ab eligendi tempore numquam molestias, vitae ipsam voluptate unde corporis quibusdam quaerat debitis atque illo temporibus rem repellat harum. Quisquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sapiente, numquam in illo dolorum optio sunt? Molestias consectetur sunt veniam excepturi! Nesciunt ipsa eius dolorum incidunt cupiditate eaque consequuntur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis repellat neque, iusto reiciendis ab odit fuga adipisci blanditiis provident eligendi, cumque laudantium amet itaque debitis quidem sequi sint sit!</p>
 </body>
 </html>
