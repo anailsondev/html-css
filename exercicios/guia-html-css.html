@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de HTML e CSS</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #1f2937; }
+        header { padding: 32px 20px; background: #173b62; color: white; text-align: center; }
+        main { max-width: 1200px; margin: auto; padding: 24px 16px 48px; }
+        section { background: white; padding: 20px; margin-top: 24px; border-radius: 10px; box-shadow: 0 2px 8px #0002; }
+        .rolagem { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        th { background: #dbeafe; }
+        code { background: #e8eef5; padding: 2px 5px; border-radius: 4px; color: #7c2d12; }
+        pre { background: #172033; color: #e5edf8; padding: 14px; overflow-x: auto; border-radius: 6px; }
+        .aviso { background: #fff7d6; border-left: 5px solid #d99b00; padding: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guia dos seus exercícios: HTML e CSS</h1>
+        <p>HTML cria o conteúdo e a estrutura; CSS muda a aparência e a posição.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Como ler o código</h2>
+            <pre>&lt;p class="destaque"&gt;Um parágrafo&lt;/p&gt;  &lt;!-- HTML: elemento/tag --&gt;
+
+p.destaque { text-align: center; }    /* CSS: seletor + propriedade + valor */</pre>
+            <p class="aviso"><strong>Tag</strong> é algo como <code>&lt;p&gt;</code> ou <code>&lt;table&gt;</code>. <strong>text-align</strong> não é tag: é uma propriedade CSS. <code>center</code>, <code>left</code>, <code>right</code> e <code>justify</code> são valores dela.</p>
+        </section>
+
+        <section>
+            <h2>Tags HTML encontradas nos exercícios</h2>
+            <div class="rolagem"><table>
+                <thead><tr><th>Bloco</th><th>Tag</th><th>O que é / para que serve</th><th>Exemplo</th></tr></thead>
+                <tbody>
+                    <tr><td>Documento</td><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Informa ao navegador que o documento usa HTML5.</td><td><code>&lt;!DOCTYPE html&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;html&gt;</code></td><td>Elemento raiz de toda a página; <code>lang</code> define o idioma.</td><td><code>&lt;html lang="pt-BR"&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;head&gt;</code></td><td>Guarda configurações que não aparecem como conteúdo.</td><td><code>&lt;head&gt;...&lt;/head&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;meta&gt;</code></td><td>Metadados: charset, viewport, descrição etc.</td><td><code>&lt;meta charset="UTF-8"&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;title&gt;</code></td><td>Texto exibido na aba do navegador.</td><td><code>&lt;title&gt;Minha página&lt;/title&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;link&gt;</code></td><td>Conecta recursos externos, normalmente uma folha CSS.</td><td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td></tr>
+                    <tr><td>Documento</td><td><code>&lt;style&gt;</code></td><td>Permite escrever CSS dentro do próprio HTML.</td><td><code>&lt;style&gt;p { color: blue; }&lt;/style&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;body&gt;</code></td><td>Contém tudo que é visível na página.</td><td><code>&lt;body&gt;...&lt;/body&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;header&gt;</code></td><td>Cabeçalho de página ou de uma seção.</td><td><code>&lt;header&gt;Logo&lt;/header&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;nav&gt;</code></td><td>Área de navegação com links importantes.</td><td><code>&lt;nav&gt;&lt;a href="#"&gt;Início&lt;/a&gt;&lt;/nav&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;main&gt;</code></td><td>Conteúdo principal e único da página.</td><td><code>&lt;main&gt;...&lt;/main&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;section&gt;</code></td><td>Seção temática do conteúdo.</td><td><code>&lt;section&gt;&lt;h2&gt;Tema&lt;/h2&gt;&lt;/section&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;article&gt;</code></td><td>Conteúdo independente, como post, notícia ou artigo.</td><td><code>&lt;article&gt;...&lt;/article&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;aside&gt;</code></td><td>Conteúdo complementar, como uma barra lateral.</td><td><code>&lt;aside&gt;Veja também...&lt;/aside&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;footer&gt;</code></td><td>Rodapé de página ou seção.</td><td><code>&lt;footer&gt;© 2026&lt;/footer&gt;</code></td></tr>
+                    <tr><td>Estrutura</td><td><code>&lt;div&gt;</code></td><td>Caixa genérica de bloco, útil para agrupar elementos.</td><td><code>&lt;div class="caixa"&gt;...&lt;/div&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td><td>Títulos, do mais importante (<code>h1</code>) ao menos importante (<code>h6</code>).</td><td><code>&lt;h1&gt;Título principal&lt;/h1&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;p&gt;</code></td><td>Parágrafo.</td><td><code>&lt;p&gt;Texto do parágrafo.&lt;/p&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;br&gt;</code></td><td>Quebra de linha; use apenas quando a quebra fizer sentido no conteúdo.</td><td><code>Rua A&lt;br&gt;Fortaleza</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;hr&gt;</code></td><td>Separação temática entre conteúdos.</td><td><code>&lt;hr&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;span&gt;</code></td><td>Grupo genérico em linha, bom para estilizar parte de um texto.</td><td><code>&lt;span class="cor"&gt;palavra&lt;/span&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;strong&gt;</code> / <code>&lt;em&gt;</code></td><td>Dão importância forte / ênfase; geralmente aparecem em negrito / itálico.</td><td><code>&lt;strong&gt;atenção&lt;/strong&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;b&gt;</code> / <code>&lt;i&gt;</code> / <code>&lt;u&gt;</code></td><td>Negrito, itálico e sublinhado apenas visuais. Prefira <code>strong</code>/<code>em</code> quando houver significado.</td><td><code>&lt;i&gt;termo&lt;/i&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;small&gt;</code> / <code>&lt;big&gt;</code></td><td>Texto menor / maior. <code>big</code> é obsoleta; prefira CSS para tamanhos.</td><td><code>&lt;small&gt;nota&lt;/small&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;mark&gt;</code></td><td>Marca ou realça uma parte relevante do texto.</td><td><code>&lt;mark&gt;importante&lt;/mark&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;del&gt;</code> / <code>&lt;ins&gt;</code></td><td>Texto removido / inserido.</td><td><code>&lt;del&gt;antigo&lt;/del&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;sub&gt;</code> / <code>&lt;sup&gt;</code></td><td>Subscrito / sobrescrito.</td><td><code>H&lt;sub&gt;2&lt;/sub&gt;O, 2&lt;sup&gt;2&lt;/sup&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;code&gt;</code> / <code>&lt;pre&gt;</code></td><td>Trecho de código / texto pré-formatado que mantém espaços e linhas.</td><td><code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;q&gt;</code> / <code>&lt;blockquote&gt;</code></td><td>Citação curta em linha / citação longa em bloco.</td><td><code>&lt;q&gt;Uma frase&lt;/q&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;abbr&gt;</code></td><td>Abreviação; <code>title</code> mostra a explicação.</td><td><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></td></tr>
+                    <tr><td>Texto</td><td><code>&lt;bdo&gt;</code></td><td>Altera a direção do texto.</td><td><code>&lt;bdo dir="rtl"&gt;texto&lt;/bdo&gt;</code></td></tr>
+                    <tr><td>Links e mídia</td><td><code>&lt;a&gt;</code></td><td>Link para página, arquivo, âncora ou outro endereço.</td><td><code>&lt;a href="pag.html"&gt;Abrir&lt;/a&gt;</code></td></tr>
+                    <tr><td>Links e mídia</td><td><code>&lt;img&gt;</code></td><td>Insere uma imagem; <code>alt</code> descreve-a.</td><td><code>&lt;img src="foto.jpg" alt="Praia"&gt;</code></td></tr>
+                    <tr><td>Links e mídia</td><td><code>&lt;picture&gt;</code> / <code>&lt;source&gt;</code></td><td>Oferecem imagens alternativas conforme tela ou formato.</td><td><code>&lt;picture&gt;&lt;source media="(...)"&gt;&lt;img ...&gt;&lt;/picture&gt;</code></td></tr>
+                    <tr><td>Links e mídia</td><td><code>&lt;audio&gt;</code> / <code>&lt;video&gt;</code></td><td>Inserem áudio / vídeo; podem conter <code>source</code>.</td><td><code>&lt;audio controls&gt;&lt;source src="a.mp3"&gt;&lt;/audio&gt;</code></td></tr>
+                    <tr><td>Links e mídia</td><td><code>&lt;iframe&gt;</code></td><td>Incorpora outra página, mapa ou vídeo.</td><td><code>&lt;iframe src="..." title="Vídeo"&gt;&lt;/iframe&gt;</code></td></tr>
+                    <tr><td>Listas</td><td><code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code> / <code>&lt;li&gt;</code></td><td>Lista não ordenada / ordenada / cada item da lista.</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+                    <tr><td>Listas</td><td><code>&lt;dl&gt;</code> / <code>&lt;dt&gt;</code> / <code>&lt;dd&gt;</code></td><td>Lista de definições: termo e sua descrição.</td><td><code>&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;...&lt;/dd&gt;</code></td></tr>
+                    <tr><td>Tabelas</td><td><code>&lt;table&gt;</code> / <code>&lt;caption&gt;</code></td><td>Cria a tabela / título ou descrição dela.</td><td><code>&lt;table&gt;&lt;caption&gt;Notas&lt;/caption&gt;...&lt;/table&gt;</code></td></tr>
+                    <tr><td>Tabelas</td><td><code>&lt;thead&gt;</code> / <code>&lt;tbody&gt;</code> / <code>&lt;tfoot&gt;</code></td><td>Agrupam cabeçalho, corpo e rodapé da tabela.</td><td><code>&lt;thead&gt;...&lt;/thead&gt;</code></td></tr>
+                    <tr><td>Tabelas</td><td><code>&lt;tr&gt;</code> / <code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td><td>Linha / célula de cabeçalho / célula de dado.</td><td><code>&lt;tr&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;/tr&gt;</code></td></tr>
+                    <tr><td>Tabelas</td><td><code>&lt;colgroup&gt;</code> / <code>&lt;col&gt;</code></td><td>Permitem selecionar e estilizar uma ou mais colunas.</td><td><code>&lt;colgroup&gt;&lt;col class="num"&gt;&lt;/colgroup&gt;</code></td></tr>
+                </tbody>
+            </table></div>
+        </section>
+
+        <section>
+            <h2>Propriedades CSS encontradas nos exercícios</h2>
+            <div class="rolagem"><table>
+                <thead><tr><th>Grupo</th><th>Propriedade</th><th>O que faz</th><th>Valores/exemplo</th></tr></thead>
+                <tbody>
+                    <tr><td>Texto</td><td><code>color</code></td><td>Cor do texto.</td><td><code>color: white;</code></td></tr>
+                    <tr><td>Texto</td><td><code>font-family</code></td><td>Família da fonte, com fontes de reserva.</td><td><code>font-family: Arial, sans-serif;</code></td></tr>
+                    <tr><td>Texto</td><td><code>font-size</code></td><td>Tamanho da fonte.</td><td><code>font-size: 1.5em;</code></td></tr>
+                    <tr><td>Texto</td><td><code>font-weight</code></td><td>Espessura: <code>normal</code>, <code>bold</code> ou 100–900.</td><td><code>font-weight: bold;</code></td></tr>
+                    <tr><td>Texto</td><td><code>font-style</code></td><td>Estilo da fonte, como <code>normal</code> ou <code>italic</code>.</td><td><code>font-style: italic;</code></td></tr>
+                    <tr><td>Texto</td><td><code>font</code></td><td>Atalho para estilo, peso, tamanho e família da fonte.</td><td><code>font: italic bold 2em Arial;</code></td></tr>
+                    <tr><td>Texto</td><td><code>text-align</code></td><td>Alinhamento horizontal do texto dentro do elemento.</td><td><code>left</code> (início), <code>center</code> (centro), <code>right</code> (fim), <code>justify</code> (estica linhas para alinhar os dois lados).</td></tr>
+                    <tr><td>Texto</td><td><code>text-indent</code></td><td>Recuo da primeira linha do texto.</td><td><code>text-indent: 30px;</code></td></tr>
+                    <tr><td>Texto</td><td><code>text-decoration</code></td><td>Linha decorativa no texto.</td><td><code>none</code>, <code>underline</code>; ex.: <code>text-decoration: none;</code></td></tr>
+                    <tr><td>Texto</td><td><code>text-shadow</code></td><td>Sombra do texto: x, y, desfoque e cor.</td><td><code>text-shadow: 1px 1px 2px black;</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-color</code></td><td>Cor de fundo.</td><td><code>background-color: lightblue;</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-image</code></td><td>Imagem ou gradiente de fundo.</td><td><code>background-image: linear-gradient(to right, red, blue);</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-repeat</code></td><td>Define a repetição da imagem de fundo.</td><td><code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-position</code></td><td>Posição da imagem de fundo.</td><td><code>center center</code>, <code>left top</code>, <code>right bottom</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-size</code></td><td>Tamanho da imagem de fundo.</td><td><code>cover</code>, <code>contain</code>, <code>100% 100%</code></td></tr>
+                    <tr><td>Cores e fundo</td><td><code>background-attachment</code></td><td>Define se o fundo rola com a página.</td><td><code>scroll</code> ou <code>fixed</code></td></tr>
+                    <tr><td>Caixa</td><td><code>width</code> / <code>height</code></td><td>Largura / altura do elemento.</td><td><code>width: 300px;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>max-width</code></td><td>Limite máximo de largura; ajuda na responsividade.</td><td><code>max-width: 800px;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>margin</code> e lados</td><td>Espaço externo do elemento.</td><td><code>margin: 20px;</code>; lados: <code>-top</code>, <code>-right</code>, <code>-bottom</code>, <code>-left</code></td></tr>
+                    <tr><td>Caixa</td><td><code>padding</code> e lados</td><td>Espaço interno, entre conteúdo e borda.</td><td><code>padding: 10px;</code>; também aceita <code>-top</code>, <code>-right</code>, <code>-bottom</code>, <code>-left</code></td></tr>
+                    <tr><td>Caixa</td><td><code>border</code></td><td>Atalho para largura, estilo e cor da borda.</td><td><code>border: 1px solid black;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>border-width</code> / <code>border-style</code> / <code>border-color</code></td><td>Controlam cada parte da borda separadamente.</td><td><code>border-style: dashed;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>border-radius</code></td><td>Arredonda os cantos.</td><td><code>border-radius: 10px;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>outline</code> e partes</td><td>Contorno externo que não ocupa espaço no layout.</td><td><code>outline: 3px solid blue;</code>; partes: <code>-width</code>, <code>-style</code>, <code>-color</code></td></tr>
+                    <tr><td>Caixa</td><td><code>box-shadow</code></td><td>Sombra da caixa: x, y, desfoque, espalhamento e cor.</td><td><code>box-shadow: 4px 4px 9px #0006;</code></td></tr>
+                    <tr><td>Caixa</td><td><code>border-image-source</code> / <code>border-image-slice</code> / <code>border-image-repeat</code></td><td>Usam uma imagem como borda, definem o recorte e a repetição.</td><td><code>border-image-source: url(borda.png);</code></td></tr>
+                    <tr><td>Layout</td><td><code>display</code></td><td>Como o elemento participa do layout.</td><td><code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>none</code></td></tr>
+                    <tr><td>Layout</td><td><code>position</code></td><td>Modo de posicionamento.</td><td><code>static</code>, <code>relative</code>, <code>absolute</code>, <code>sticky</code>, <code>fixed</code></td></tr>
+                    <tr><td>Layout</td><td><code>top</code> / <code>left</code></td><td>Deslocam elemento posicionado (não funcionam em <code>static</code>).</td><td><code>top: 50%; left: 50%;</code></td></tr>
+                    <tr><td>Layout</td><td><code>transform</code></td><td>Transforma visualmente sem alterar o fluxo normal.</td><td><code>transform: translate(-50%, -50%);</code></td></tr>
+                    <tr><td>Layout</td><td><code>overflow-x</code></td><td>Controla excesso de conteúdo na horizontal.</td><td><code>overflow-x: auto;</code> cria rolagem se necessária.</td></tr>
+                    <tr><td>Tabela</td><td><code>border-collapse</code></td><td>Define se as bordas de células se unem.</td><td><code>collapse</code> ou <code>separate</code></td></tr>
+                    <tr><td>Tabela</td><td><code>vertical-align</code></td><td>Alinhamento vertical em células ou elementos inline.</td><td><code>top</code>, <code>middle</code>, <code>bottom</code></td></tr>
+                </tbody>
+            </table></div>
+        </section>
+        <section>
+            <h2>Seletores e pseudoclasses que também aparecem</h2>
+            <div class="rolagem"><table><thead><tr><th>Item</th><th>Significado</th><th>Exemplo</th></tr></thead><tbody>
+                <tr><td><code>.classe</code></td><td>Seleciona elementos com uma classe.</td><td><code>.destaque { color: red; }</code></td></tr>
+                <tr><td><code>#id</code></td><td>Seleciona o elemento com aquele identificador único.</td><td><code>#principal { ... }</code></td></tr>
+                <tr><td><code>:hover</code></td><td>Aplica estilo enquanto o mouse está sobre o elemento.</td><td><code>a:hover { text-decoration: underline; }</code></td></tr>
+                <tr><td><code>:visited</code></td><td>Seleciona links que já foram visitados.</td><td><code>a:visited { color: purple; }</code></td></tr>
+                <tr><td><code>&gt;</code></td><td>Combinador de filho direto.</td><td><code>div &gt; p { display: none; }</code></td></tr>
+            </tbody></table></div>
+        </section>
+    </main>
+</body>
+</html>
